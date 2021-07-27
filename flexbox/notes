@@ -1,0 +1,63 @@
+flexbox 
+
+flex container é a tag que envolve os itens flex, ao indicar display : flex, essa tag passa a ser um flex container.
+
+display: flex // transforma o elemento automaticamente em um flex container e seu elementos filhos em itens flex, que são elementos line, tamanho do item é do tamanho do conteúdo, um item flex pode ser transformando em flex container quando adicionado um display: flex nele
+
+flex: wrap // quebra a linha quando não cabe no container
+
+flex:wrap-reverse // quebra a linha debaixo pra cima
+
+flex: 1 // o item vai ocupar 1 espaço dentro do tamanho total do container
+
+flex- direction
+
+padrão é row-linha
+
+row-reverse - linha na ordem reversa
+
+flex-direction: column - deixa os itens em coluna
+
+column-reverse- coluna na ordem reversa
+
+flex-flow é uma atalho para o direction e wrap 
+
+justify-content - precisa ter um gap entre os itens
+
+justify-content: flex-start // alinha ao inicio do container
+                 flex-end // alinha ao final do container
+                 center // alinha ao centro do container
+                 space-between // alinha um item em cada ponta  ou daum espaço entre os itens
+                 space-around// cria um espaço entre os itens e no inicio e no final
+
+align-items
+            : flex-stretch // padrão - ele que permite os itens fiquem do tamanho do conteudo
+            : flex-start/ ocupam exatamente o tamanho deles, do inicio
+            :flex-end // ocupam exatamente o tamanho deles, do final
+            :center // ocupam exatamente o tamanho deles, no centro
+            :baseline // pela tipografia
+
+align-content // para funcionar tem que ter um gap no height
+            :stretch // padrão  - ele que faz com que os itens cresçam igualmente na vertical            
+
+flex : 1 é um atalho para o grow basis shrink
+
+flex-grow- define a habilidade de um flex item crescer / largura - padrão é valor  0
+         : 1 os itens se expandem igualmente para ocupar o container
+
+
+flex-basis - indica o tamanho inicial do item flex antesda distribuição do espaço restante
+        : auto / valor padrão / o valor pode ser definido em % em px etc
+
+flex-shrink -Define a capacidade de redução de tamanho do item
+          : 1 // valor padrão - pemirte que os itens tenham seu tamanho reduzido para caber no container        
+          : 0 // não pode diminuir
+          : qualquer numero por exemplo se for 3 ele vai diminuir 3 vezes mais 
+
+
+order - modifica a ordem dos flex itens - sempre do menor para o maior
+
+      : 0 // padrão, mesma ordem que está no html
+
+
+align-self - serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.Passa por cima do que é definido no align-items 
